@@ -2,6 +2,8 @@ FROM ubuntu:18.04
 
 WORKDIR /root
 
+ENV AUTOMATION 1
+
 RUN apt-get update && \
   apt-get -y install vim curl git tar
 
@@ -21,12 +23,11 @@ RUN curl -sL \
   https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.32.0/omnisharp-linux-x64.tar.gz \
   | tar -xz -C /opt/roslyn-1.32.0
 
-ADD pluginstall.vim pluginstall.vim
+ADD .vimrc .vimrc
 
-# RUN vim -s pluginstall.vim
-# RUN vim -E -s -u "/root/.vimrc" +PlugInstall +qall
-RUN vim -e -s +PlugInstall +qall
+# RUN vim +'PlugInstall --sync' +qall >/dev/null 2>&1
+RUN vim +'PlugInstall --sync' +qall 
 
-RUN ls -al .vim/plugged
+RUN ls -al /root/.vim/plugged/
 
 ADD . .

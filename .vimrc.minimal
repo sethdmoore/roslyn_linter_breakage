@@ -1,0 +1,29 @@
+set nocompatible
+
+call plug#begin('~/.vim/plugged')
+
+    Plug 'dense-analysis/ale'
+
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+
+    Plug 'OmniSharp/omnisharp-vim'
+call plug#end()
+
+let g:OmniSharp_server_stdio = 1
+
+" let g:OmniSharp_server_path = '/opt/roslyn-1.32.0/run'
+let g:OmniSharp_server_path = '/opt/roslyn-1.34.4/run'
+let g:OmniSharp_server_stdio_quickload = 1
+let g:OmniSharp_server_loading_timeout = 5
+let g:OmniSharp_server_display_loading = 1
+
+let g:ale_linters = { 'cs': ['OmniSharp'] }
+
+if exists('deoplete#custom#option')
+  call deoplete#custom#option('sources', {
+        \ '_': ['ale'],
+  \})
+  autocmd VimEnter * call deoplete#initialize()
+endif
