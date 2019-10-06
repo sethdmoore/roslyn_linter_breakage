@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "debug_roslyn", "debug_roslyn.csproj", "{285FD535-8C7F-4BF3-8C17-D3804749CDFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	Release|Any CPU = Release|Any CPU
+	Tools|Any CPU = Tools|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{285FD535-8C7F-4BF3-8C17-D3804749CDFD}.Tools|Any CPU.Build.0 = Tools|Any CPU
+	EndGlobalSection
+EndGlobal
